@@ -1,0 +1,268 @@
+html,
+body {
+  background-color: white;
+  color: black;
+  font-family: 'PT Sans', 'Merienda', sans-serif;
+  height: 100vh;
+  margin: 0;
+  font-size: large;
+}
+
+#bloc {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+header,
+section,
+footer {
+  display: table-row;
+}
+
+section {
+  height: 100%;
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+.entete-tableau th {
+  font-weight: bold;
+}
+
+
+/* Image au chargement de la page */
+
+.loader {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: wait;
+  background: url('../assets/loader.gif');
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+
+/* Bar de navigation */
+
+.navbar span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar .dropdown-menu a {
+  padding: 5px 20px;
+  font-size: 12px;
+}
+
+.dropdown:hover .dropdown-menu{
+  display: block;
+}
+.dropdown-menu{
+  margin-top: 0;
+}
+
+header nav a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* Soulignement au survol sur les lien du menu */
+
+.menu-item a::after {
+  content: '';
+  width: 0;
+  height: 5px;
+  position: absolute;
+  background-color: orangered;
+  bottom: -3px;
+  left: 0;
+  text-align: center;
+  transition: width 0.5s ease-in-out;
+}
+
+.menu-item a:hover::after {
+  width: 100%;
+}
+
+
+/* Espace en haut pour permettre la visibilité du text des liens */
+
+.space-top {
+  background-color: rgba(2, 75, 94, 0.8);
+}
+
+.top-panel {
+  /* background-image: url(../../images/img1.jpg); */
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.top-panel-header {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  color: #ffffff;
+}
+
+.top-panel-title {
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 1px 1px 1px red;
+}
+
+.top-panel-title+ul li {
+  text-shadow: 1px 1px 1px red;
+}
+
+.top-panel-hover {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.top-panel-home {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.top-panel-title+ul li {
+  font-size: 30px;
+  list-style-type: none;
+}
+
+.carousel-image {
+  height: 480px;
+}
+
+/* La section présentation des service */
+
+.partie-img {
+  width: 100%;
+  height: 200px;
+}
+
+
+/* Libellé Activité */
+
+.partie-lib {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+
+/* Zone qui sommes nous */
+
+.zone-about,
+.zone-historique {
+  background-color: #f7f7f7;
+  padding: 1.5em;
+  color: black;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.partie-about-img {
+  width: 90%;
+  height: 90%;
+}
+
+.zone-vente {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.vente-card-body {
+  background-color: #dfd9d9;
+}
+
+
+/* Lien afficher plus */
+
+.view-all-vente-button {
+  text-align: right;
+  padding: 10px;
+  padding-right: 1em;
+  background-color: white;
+}
+
+.view-all-vente-button a {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.flash {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1035;
+}
+
+/*****************************************************************/
+
+
+/* ADAPTATION PETIT ECRAN */
+
+@media only screen and (max-width:920px) {}
+
+@media only screen and (max-width:720px) {
+  .top-panel {
+    height: 350px;
+  }
+  .top-panel-header {
+    top: 65%;
+  }
+  .top-panel-title {
+    font-size: 40px;
+  }
+  .top-panel-title+ul li {
+    font-size: 20px;
+  }
+  .carousel-image {
+    height: 450px;
+  }
+  .carousel-caption-small-size {
+    text-align: left;
+  }
+  .page-footer {
+    text-align: left !important;
+  }
+  .login-section,
+  .register-section {
+    width: 90%;
+  }
+  .phone-col {
+    flex: 0 0 100%;
+  }
+}
