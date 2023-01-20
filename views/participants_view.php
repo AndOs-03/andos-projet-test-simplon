@@ -160,7 +160,7 @@
                           '<div class="dropdown-menu dropdown-menu dropdown-menu-right">' +
                           '<a class="dropdown-item link-update-button" data-bs-toggle="tooltip" href="#" data-ligne-id="'+participant['id']+'">' +
                           '<i class="fas fa-edit mr-2"></i> Modifier</a>' +
-                          '<a class="dropdown-item link-update-button" data-bs-toggle="tooltip" href="#" data-ligne-id="'+participant['id']+'">' +
+                          '<a class="dropdown-item link-delete-button" data-bs-toggle="tooltip" href="#" data-ligne-id="'+participant['id']+'">' +
                           '<i class="fas fa-trash mr-2"></i> Supprimer</a></div></li></ul></td></tr>';
                       $(".table-data-body").append(newLine);
                     }
@@ -263,7 +263,7 @@
                             '<div class="dropdown-menu dropdown-menu dropdown-menu-right">' +
                             '<a class="dropdown-item link-update-button" data-bs-toggle="tooltip" href="#" data-ligne-id="'+participant['id']+'">' +
                             '<i class="fas fa-edit mr-2"></i> Modifier</a>' +
-                            '<a class="dropdown-item link-update-button" data-bs-toggle="tooltip" href="#" data-ligne-id="'+participant['id']+'">' +
+                            '<a class="dropdown-item link-delete-button" data-bs-toggle="tooltip" href="#" data-ligne-id="'+participant['id']+'">' +
                             '<i class="fas fa-trash mr-2"></i> Supprimer</a></div></li></ul></td></tr>';
                         $(".table-data-body").append(currentLine);
                       });
